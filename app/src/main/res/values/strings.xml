@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EAndrade</string>
+    <string name="github_username">eandrade-dev</string>
+    <string name="linkedin_username">emandrade</string>
+    <string name="email">edu7_and7@hotmail.com</string>
+    <string name="phone_number">+351 914 856 546</string>
+    <string name="name">Eduardo Andrade</string>
+    <string name="github_title">Github</string>
+    <string name="linkedin_title">LinkedIn</string>
+    <string name="github_url">https://github.com/eandrade-dev</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/emandrade/</string>
+    <string name="job_position">Mobile Software Engineer</string>
+</resources>

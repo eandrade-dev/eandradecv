@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "526773630811",
+    "project_id": "eandradecv",
+    "storage_bucket": "eandradecv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526773630811:android:baa214aa0da99304240c7e",
+        "android_client_info": {
+          "package_name": "pt.eandrade.eandrade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526773630811-bojsgbvi8so1qvvhlkdpm97h2vpcbuiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrKCQ1K_K6OGdDaCckKqisvKqgo-3chck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526773630811-bojsgbvi8so1qvvhlkdpm97h2vpcbuiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
