@@ -4,7 +4,7 @@ This repository contains a basic curriculum app fully built in Kotlin for the An
 
 It was created to showcase my work and resumé, as well as a means to learn Android's newest UI toolkit, Jetpack Compose.
 
-# Features
+## Features
 
 The app contains several categories with information about myself, such as:
 - Basic information
