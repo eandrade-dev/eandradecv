@@ -26,6 +26,8 @@ Besides Compose, several other tools were used in the development of this app. H
   - An image-loading library that is able to fetch images over the network. Perfect to use with our Firebase data storage.
 - [Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
   - Used in conjunction with Retrofit to manage data retrieved from Firebase throughout the application's lifecycle
+- [Kotlin Coroutines](https://developer.android.com/kotlin/coroutines)
+  - Simple coroutine usage to keep those long network connections from blocking the main thread
 - [Compose Navigation](https://developer.android.com/jetpack/compose/navigation)
   - App navigation structure built with Compose's own Navigation component
 - [Gson](https://github.com/google/gson)
