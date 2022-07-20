@@ -10,7 +10,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -22,7 +21,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.skydoves.landscapist.glide.GlideImage
-import kotlinx.coroutines.launch
 import pt.eandrade.eandrade.FIREBASE_BASE_URL
 import pt.eandrade.eandrade.R
 import pt.eandrade.eandrade.components.ErrorBox
@@ -37,7 +35,11 @@ fun ExperienceDetailsComponent(navController: NavHostController, firebaseDataIde
     mainViewModel.getJobExperience(firebaseDataIdentifier)
     val jobDetails = mainViewModel.jobExperienceDetails
 
-    val bottomSheetScaffoldState = rememberBottomSheetScaffoldState()
+    val bottomSheetScaffoldState = rememberBottomSheetScaffoldState(
+        bottomSheetState = BottomSheetState(
+            initialValue = BottomSheetValue.Collapsed,
+        )
+    )
     val sheetState = rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden)
 
     EAndradeTheme {
@@ -50,18 +52,13 @@ fun ExperienceDetailsComponent(navController: NavHostController, firebaseDataIde
             },
             sheetShape = RoundedCornerShape(24.dp),
             scaffoldState = bottomSheetScaffoldState,
-            // There is currently a glitch that automatically expands this section
-            // because sheetPeekHeight is set to 520.dp. Setting the value to a lower number
-            // will cause the sheet to stop automatically expanding
             sheetPeekHeight = if (sheetState.isAnimationRunning || sheetState.isVisible) {
                 0.dp
             }else {
                 520.dp
-            },
-
+            }
         )
     }
-
 }
 
 @Composable
@@ -98,8 +95,7 @@ fun ExperienceDetailsHeader(
             Box(
                 modifier = Modifier
                     .size(72.dp)
-                    .clip(CircleShape)
-                    .background(Color.White),
+                    .clip(CircleShape),
                 contentAlignment = Alignment.Center
             ){
                 GlideImage(
@@ -135,7 +131,6 @@ fun ExperienceDetailsInfo(
 ) {
     Column(
         modifier = Modifier
-            .background(Color.White)
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())
     ) {
